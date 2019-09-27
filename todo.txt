@@ -1,0 +1,2 @@
+-rajouter un menu
+-lien sur les titres "relation ..." vers la doc de doctrine
