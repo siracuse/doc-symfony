@@ -1,0 +1,12 @@
+form {
+    margin: 0 auto;
+    width: fit-content;
+    margin-bottom: 100px;
+}
+.label-firstname {
+    margin-right: 5px
+}
+.code {
+    background-color: #eee;
+    padding: 0 5px;
+}
