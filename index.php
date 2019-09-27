@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +18,7 @@
 
     <?php
 
-if (($_POST['onetomany'])) {
+if (isset($_POST['onetomany'])) {
     $firstname = ucfirst($_POST['firstname']);
     $secondname = ucfirst($_POST['secondname']);
 
@@ -34,16 +28,16 @@ if (($_POST['onetomany'])) {
     $response .= '<br> /**';
     $response .= '<br> * @ORM\OneToMany(targetEntity="'.$secondname.'", mappedBy="'.lcfirst($firstname).'"';
     $response .= '<br> */';
-    $response .= '<br> private '.lcfirst($secondname).'s;</code></div>';
+    $response .= '<br> private $'.lcfirst($secondname).'s;</code></div>';
 
-    $response .= '<br><br><hr><br>';
-    $response .= '<div class="code"><code>class '.$secondname;
+    $response .= '<br><hr><br>';
+    $response .= '<div class="code lastcode"><code>class '.$secondname;
     $response .= '<br> {';
     $response .= '<br> /**';
     $response .= '<br> * @ORM\ManyToOne(targetEntity="'.$firstname.'", inversedBy="'.lcfirst($secondname).'s"';
     $response .= '<br> * @ORM\JoinColumn(name="'.lcfirst($firstname).'_id", referencedColumnName="id"';
     $response .= '<br> */';
-    $response .= '<br> private '.lcfirst($firstname).';</code></div>';
+    $response .= '<br> private $'.lcfirst($firstname).';</code></div>';
     echo $response;
     unset($_POST);
 }
@@ -62,26 +56,26 @@ if (($_POST['onetomany'])) {
 
 <?php
 
-if (($_POST['onetomany'])) {
+if (isset($_POST['manytomany'])) {
     $firstname = ucfirst($_POST['firstname']);
     $secondname = ucfirst($_POST['secondname']);
 
-    $response = '<h3>Relation One-To-Many - Bidirectional </h3>';
+    $response = '<h3>Relation Many-To-Many - Bidirectional </h3>';
     $response .= '<div class="code"><code>class '.$firstname;
     $response .= '<br> {';
     $response .= '<br> /**';
-    $response .= '<br> * @ORM\OneToMany(targetEntity="'.$secondname.'", mappedBy="'.lcfirst($firstname).'"';
+    $response .= '<br> * @ORM\ManyToMany(targetEntity="'.$secondname.'", inversedBy="'.lcfirst($firstname).'s"';
+    $response .= '<br> * @ORM\JoinTable(name="'.lcfirst($firstname).'s_'.lcfirst($secondname).'s"';
     $response .= '<br> */';
-    $response .= '<br> private '.lcfirst($secondname).'s;</code></div>';
+    $response .= '<br> private $'.lcfirst($secondname).'s;</code></div>';
 
-    $response .= '<br><br><hr><br>';
-    $response .= '<div class="code"><code>class '.$secondname;
+    $response .= '<br><hr><br>';
+    $response .= '<div class="code lastcode"><code>class '.$secondname;
     $response .= '<br> {';
     $response .= '<br> /**';
-    $response .= '<br> * @ORM\ManyToOne(targetEntity="'.$firstname.'", inversedBy="'.lcfirst($secondname).'s"';
-    $response .= '<br> * @ORM\JoinColumn(name="'.lcfirst($firstname).'_id", referencedColumnName="id"';
+    $response .= '<br> * @ORM\ManyToMany(targetEntity="'.$firstname.'", mappedBy="'.lcfirst($secondname).'s"';
     $response .= '<br> */';
-    $response .= '<br> private '.lcfirst($firstname).';</code></div>';
+    $response .= '<br> private $'.lcfirst($firstname).'s;</code></div>';
     echo $response;
     unset($_POST);
 }
