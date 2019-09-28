@@ -24,7 +24,7 @@ if (isset($_POST['onetomany'])) {
     $firstname = ucfirst($_POST['firstname']);
     $secondname = ucfirst($_POST['secondname']);
 
-    $response = '<h3>Relation One-To-Many - Bidirectional </h3>';
+    $response = '<h3><a href="https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/association-mapping.html#one-to-many-bidirectional" target=_blank>Relation One-To-Many - Bidirectional</a> </h3>';
     $response .= '<div class="code"><code>class '.$firstname;
     $response .= '<br> {';
     $response .= '<br> /**';
