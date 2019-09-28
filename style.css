@@ -8,7 +8,8 @@ form {
 }
 .code {
     background-color: #eee;
-    padding: 0 5px;
+    padding: 5px 0px 5px 10px;
+    border-radius: 5px;
 }
 .lastcode {
     margin-bottom: 20px;

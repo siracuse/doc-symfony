@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Documentation Symfony</title>
+    <title>Generator relation doctrine</title>
     <link href="style.css" rel="stylesheet">
 </head>
 

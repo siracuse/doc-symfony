@@ -1,2 +1,16 @@
 -rajouter un menu
+    -accueil (a propos, c'est quoi l'interet du site)
+    -cmd utile (liste des cmd utile)
+    -relation entité
+        -Onetomany
+        -manytomany
+        -manytomany avec attribut
+    -doc symfony
+    -doc doctrine
+    -doc twig
+
+
+
 -lien sur les titres "relation ..." vers la doc de doctrine
+-faire le design du site
+-verification formulaire si les champs ne sont pas null ...
