@@ -1,6 +1,5 @@
 -rajouter un menu
     -accueil (a propos, c'est quoi l'interet du site)
-    -cmd utile (liste des cmd utile)
     -relation entité
         -Onetomany
         -manytomany
