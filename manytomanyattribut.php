@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Generator relation doctrine</title>
-    <link href="style.css" rel="stylesheet">
-</head>
-
-
-<body>
-    <?php include('menu.php'); ?>
 
     <form action="" method="post" class="onetomany">
         <input type="text" name="firstname" class="input-firstname" id="firstname" required>
@@ -83,9 +73,5 @@ if (isset($_POST['manytomany'])) {
 }
 
 ?>
-
-</body>
-
-</html>
 
 

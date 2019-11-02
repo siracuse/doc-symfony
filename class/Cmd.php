@@ -21,7 +21,7 @@ class Cmd
         // if (isset($this->description)) {
         //     $response .= '# ';
         // }
-        $response .= '<div class="code"><code>'.$this->cmd.'</code></div>';
+        $response .= '<pre><code>'.$this->cmd.'</code></pre>';
         $response .= '</div>';
 
         return $response;

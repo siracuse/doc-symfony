@@ -1,40 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>Documentation Symfony</title>
-    <link href="style.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <!-- Scrollbar Custom CSS -->
+<!--    <link rel="stylesheet"-->
+<!--          href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">-->
+
+    <!-- Font Awesome JS -->
+<!--    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"-->
+<!--            integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"-->
+<!--            crossorigin="anonymous"></script>-->
+<!--    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"-->
+<!--            integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"-->
+<!--            crossorigin="anonymous"></script>-->
+
 </head>
 
-
 <body>
+
+<div class="wrapper">
+    <!-- Sidebar  -->
+
     <?php include('menu.php'); ?>
 
-    <h1>Documentation Symfony 3.4</h1>
 
-    <h2>Le but de ce site</h2>
-    <p>J'ai créé ce site web afin de regrouper des mémos, des morceaux de code, des solutions et des outils
-    dans le but de réaliser mes projets symfony plus facilement et rapidement </p>
+    <!-- Page Content  -->
+    <?php
+    $page= getenv("QUERY_STRING");
+    if($page=="")
+        $page="accueil";
+    echo '<div id="content">';
+    include $page.".php";
+    echo '<div/>';
+    ?>
+
+</div>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<!-- Popper.JS -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"-->
+<!--        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"-->
+<!--        crossorigin="anonymous"></script>-->
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+<!-- jQuery Custom Scroller CDN -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>-->
 
 
-    <h2><a href="cmd.php">CMD Utile</a> - Mes commandes les plus utilées</h2>
-    <p>Sur cette page, vous retrouverez une liste de commande terminal que j'utilise le plus souvent.
-    Cela peut être la création d'un bundle à la génération des getters et setters. </p>
-
-    <h2>Formulaire de génération d'annotation relative au relation entité</h2>
-    <p>Sur ces pages, vous retrouverez plusieurs formulaires permettant de générer les annotations automatiquement.<br>
-    Par exemple pour une relation OneToMany entre un "Produit" et une "Marque"
-    (Une marque peut avoir plusieurs produits, mais un produit n'est associé qu'a une seule marque), on obtient :
-
-    <div class="code"><code>class Marque<br> {<br> /**<br> * @ORM\OneToMany(targetEntity="Produit", mappedBy="marque")<br> */<br> private $produits;</code></div>
-    <br>
-    <div class="code lastcode"><code>class Produit<br> {<br> /**<br> * @ORM\ManyToOne(targetEntity="Marque", inversedBy="produits")<br> * @ORM\JoinColumn(name="marque_id", referencedColumnName="id")<br> */<br> private $marque;</code></div>
-    </p>
-
-
-    <h2>Source</h2>
-    <p>Documentation officiel de symfony (anglais) : <a href="https://symfony.com/doc/3.4//index.html#gsc.tab=0">symfony.com/doc/3.4</a> </p>
 </body>
 
 </html>
-
-
