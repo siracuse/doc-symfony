@@ -16,8 +16,8 @@ class Cmd
 
     public function getResponse()
     {
-        $response = '<div class="div-cmd">';
-        $response .= '<div class="title-cmd">'.$this->title.'</div>';
+        $response = '<div class="div-cmd mb-4">';
+        $response .= '<div class="title-cmd mb-2">'.$this->title.'</div>';
         // if (isset($this->description)) {
         //     $response .= '# ';
         // }

@@ -5,6 +5,7 @@
 
     <ul class="list-unstyled components">
         <li><a href="index.php">Accueil</a></li>
+        <li><a href="index.php?setup">1. Setup</a></li>
         <li><a href="index.php?cmd">CMD utiles</a></li>
         <li>
             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Relation ORM</a>

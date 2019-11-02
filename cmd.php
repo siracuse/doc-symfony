@@ -1,14 +1,15 @@
-<h1>Les CMD utiles</h1>
+<h1 class="mb-5">Les CMD utiles</h1>
+
+<!--<div class="div-cmd">-->
+<!--    <div class="title-cmd mb-2">Nouveau projet Symfony 3</div>-->
+<!--    <pre><code>> composer create-project symfony/framework-standard-edition project_name</code></pre>-->
+<!--</div>-->
+
+<!--<code>&lt;section&gt;</code>-->
+
 
 <?php
 include('class/Cmd.php');
-$cmd = new Cmd('Nouveau projet Symfony 3', 'composer create-project symfony/framework-standard-edition project-name');
-echo($cmd->getResponse());
-
-$cmd = new Cmd('Création d\'un bundle', 'php bin/console generate:bundle');
-echo($cmd->getResponse());
-
-echo '<hr>';
 
 $cmd = new Cmd('Création de la bdd', 'php bin/console doctrine:database:create');
 echo($cmd->getResponse());
@@ -41,7 +42,6 @@ echo($cmd->getResponse());
 
 
 ?>
-
 
 
 
