@@ -2,7 +2,7 @@
 include('class/Cmd.php');
 
 ?>
-<h3 class="mb-5">Mise en production d'un site symfony</h3>
+<h3 class="mb-5">FOSUser Bundle</h3>
 
 
 <div class="title-cmd mb-2">Checklist :</div>
