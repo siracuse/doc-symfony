@@ -15,7 +15,7 @@ echo($cmd->getResponse());
 ?>
 
 
-<div class="title-cmd mb-2">À faire après avoir exécuté la commande afin d'avoir d'un fichier vierge :</div>
+<div class="title-cmd mb-2">À faire après la création du projet :</div>
 <ul class="mb-5">
     <li>Suppression du bundle <code>AppBundle</code> dans le répertoire <code>/src</code></li>
     <li>Supprimer l’appel du bundle <code>Appbundle</code> dans le <code>AppKernel.php</code></li>
