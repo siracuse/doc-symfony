@@ -30,9 +30,8 @@ $cmd = new Cmd('Création d\'un bundle :', '> php bin/console generate:bundle');
 echo($cmd->getResponse());
 ?>
 
-<div class="title-cmd mb-2">À faire après la création d'un bundle :</div>
+<div class="title-cmd mb-2">À faire après la création du premier bundle :</div>
 <ul>
-    <li>Suppression du fichier <code>DefaultController.php</code> dans <code>src/monBundle/Controller</code></li>
     <li>Suppression du dossier <code>Default</code> dans <code>src/monBundle/Ressources/views</code></li>
     <li>Modifier le composer.json : <code>"AppBundle\": "src/AppBundle" </code>--&gt; <code>"": "src/"</code></li>
     <li>Effectuer la commande: <code> composer dump-autoload</code></li>
