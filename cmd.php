@@ -44,6 +44,12 @@ echo '<hr>';
 $cmd = new Cmd('Création de formulaire à partir d\'une entitée ', 'php bin/console generate:doctrine:form BundleName:entity_name');
 echo($cmd->getResponse());
 
+
+$cmd = new Cmd('Vider le cache dev ', 'php bin/console cache:clear');
+echo($cmd->getResponse());
+
+$cmd = new Cmd('Vider le cache prod ', 'php bin/console cache:clear --env=prod');
+echo($cmd->getResponse());
 ?>
 
 
