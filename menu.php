@@ -9,6 +9,7 @@
         <li><a href="index.php?prod">2. Mise en prod</a></li>
         <li><a href="index.php?fosuser">3. FOSUser Bundle</a></li>
         <li><a href="index.php?cmd"># CMD utiles</a></li>
+        <li><a href="index.php?cmd"># Service</a></li>
         <li>
             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Relation ORM</a>
             <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -25,12 +26,12 @@
         </li>
     </ul>
 
-    <ul class="list-unstyled CTAs">
-        <li>
-            <a href="#" class="download">Download source</a>
-        </li>
-        <li>
-            <a href="#" class="article">Back to article</a>
-        </li>
-    </ul>
+<!--    <ul class="list-unstyled CTAs">-->
+<!--        <li>-->
+<!--            <a href="#" class="download">Download source</a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <a href="#" class="article">Back to article</a>-->
+<!--        </li>-->
+<!--    </ul>-->
 </nav>
